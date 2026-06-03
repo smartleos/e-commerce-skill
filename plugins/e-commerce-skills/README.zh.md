@@ -10,19 +10,6 @@
 
 当前可用能力是：`ecommerce-content-wireframe`。它会先引导用户填写完整产品信息表，再按照固定步骤梳理详情页内容；内容确认后，生成一份可运行的手机长图 HTML 黑白线框稿，用于预览详情页内容结构、模块顺序和转化逻辑。
 
-## 其他安装方式
-
-如果你的工具使用插件市场安装，也可以使用：
-
-```text
-/plugin marketplace add saibodafu/e-commerce-skill
-/plugin install e-commerce-skills
-```
-
-安装后可用 `/skills` 检查是否加载成功。
-
-在 Codex 中打开本仓库目录，也可以直接读取 `AGENTS.md`、`commands/` 和 `skills/` 中的工作流说明。
-
 ## 当前 Skill
 
 ### ecommerce-content-wireframe
