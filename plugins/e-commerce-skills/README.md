@@ -1,12 +1,18 @@
 # e-commerce-skills｜电商详情页内容 Skill
 
+在 Claude Code、Codex、WorkBuddy 等支持 skills 的工具中运行：
+
+```text
+/install-skill saibodafu/e-commerce-skill/ecommerce-content-wireframe
+```
+
 这是一个用于梳理电商商品详情页内容的 skill。
 
 当前可用能力是：`ecommerce-content-wireframe`。它会先引导用户填写完整产品信息表，再按照固定步骤梳理详情页内容；内容确认后，生成一份可运行的手机长图 HTML 黑白线框稿，用于预览详情页内容结构、模块顺序和转化逻辑。
 
-## 安装
+## 其他安装方式
 
-### Claude Code 安装
+如果你的工具使用插件市场安装，也可以使用：
 
 ```text
 /plugin marketplace add saibodafu/e-commerce-skill
@@ -15,9 +21,7 @@
 
 安装后可用 `/skills` 检查是否加载成功。
 
-### Codex 使用
-
-在 Codex 中打开本仓库目录，即可读取 `AGENTS.md`、`commands/` 和 `skills/` 中的工作流说明。
+在 Codex 中打开本仓库目录，也可以直接读取 `AGENTS.md`、`commands/` 和 `skills/` 中的工作流说明。
 
 ## 当前 Skill
 
@@ -91,3 +95,9 @@
 ├── .claude-plugin/
 └── .codex-plugin/
 ```
+
+## 赛博大福
+
+欢迎关注公众号“赛博大福”。
+
+用 AI 把营销重干一遍。
