@@ -1,135 +1,96 @@
-# e-commerce-skills — Claude Code / Codex 电商技能包
+# e-commerce-skills｜电商详情页内容 Skill
 
-> 把商品策略、卖点提炼、详情页策划、货架内容、直播脚本、活动复盘等电商工作流沉淀成可复用的 Agent skills。
+这是一个用于梳理电商商品详情页内容的 skill。
 
----
+当前可用能力是：`ecommerce-content-wireframe`。它可以根据少量商品信息，先快速生成一版可运行的手机长图 HTML 黑白线框稿，让用户先看到详情页内容效果；如果初稿不够准，再按照固定步骤逐层精修详情页内容。
 
 ## 安装
 
-### Claude Code 快速安装
-
-在 Claude Code 中添加这个 GitHub 仓库作为插件市场来源：
+### Claude Code 安装
 
 ```text
 /plugin marketplace add saibodafu/e-commerce-skills
-```
-
-然后安装插件：
-
-```text
 /plugin install e-commerce-skills
 ```
 
-重启 Claude Code 后，用 `/skills` 检查是否已加载电商技能。
-
-### Claude Code 手动安装
-
-```bash
-git clone https://github.com/saibodafu/e-commerce-skills.git
-cc --plugin-dir ./e-commerce-skills
-```
-
-也可以使用 SSH：
-
-```bash
-git clone git@github.com:saibodafu/e-commerce-skills.git
-cc --plugin-dir ./e-commerce-skills
-```
+安装后可用 `/skills` 检查是否加载成功。
 
 ### Codex 使用
 
-在 Codex 中打开本仓库目录即可使用：
+在 Codex 中打开本仓库目录，即可读取 `AGENTS.md`、`commands/` 和 `skills/` 中的工作流说明。
 
-```bash
-git clone https://github.com/saibodafu/e-commerce-skills.git
-cd e-commerce-skills
-```
+## 当前 Skill
 
-Codex 会读取 `AGENTS.md`、`.codex-plugin/plugin.json`、`commands/` 和 `skills/` 中的说明。后续新增具体 skill 后，可以直接说：
+### ecommerce-content-wireframe
+
+电商详情页内容黑白线框稿。
+
+当你想梳理一个商品的电商详情页内容时使用。你可以先随便输入一点产品信息，skill 会直接生成一版可运行的手机长图 HTML 黑白线框稿。
+
+第一阶段：先给结果
+
+用户只要输入少量商品信息，甚至只写一句话、几个关键词或不完整字段，也会先生成详情页 HTML 初稿。
+
+第二阶段：再进入共创
+
+初稿生成后，用户补充更完整的产品信息表。然后 skill 按固定顺序逐层精修：
+
+1. 核心价值承诺层
+2. 痛点锚定层
+3. 卖点强化层
+4. 使用场景层
+5. 产品身份卡
+6. 决策收口层
+
+最终会先整理成完整的详情页内容文档，再生成可直接运行的 HTML 黑白线框稿。
+
+## 示例输入
 
 ```text
-使用 e-commerce-skills，帮我把这个商品需求整理成可执行的电商工作流。
+使用 ecommerce-content-wireframe，帮我梳理一款儿童电解质水的详情页内容。
+
+产品名：小K水
+目标人群：3-12岁儿童家长
+核心场景：运动后、出汗后、天气热的时候
+核心卖点：
+1. 低糖
+2. 好喝
+3. 补充电解质
+4. 儿童友好
 ```
 
----
-
-## 使用方式
-
-### Claude Code 命令
+## 也可以这样说
 
 ```text
-/ecommerce <workflow> [context]
+帮我梳理一个新品的电商详情页内容。
 ```
 
-当前可用 workflow：
+```text
+用 ecommerce-content-wireframe，给我生成一版详情页黑白线框稿。
+```
 
-- `ecommerce-content-wireframe`：电商详情页内容黑白线框稿。用户先用少量信息一键梳理详情页内容并生成可运行 HTML 初稿，再按顺序逐层精修核心价值承诺、痛点锚定、卖点强化、使用场景、产品身份卡和决策收口。
+```text
+我有一个猫粮产品，先帮我出一版详情页内容 HTML 初稿。
+```
 
-新增具体 workflow 后，应同步更新：
+## 输出特点
 
-- `skills/<skill-name>/SKILL.md`
-- `commands/ecommerce.md`
-- `README.md`
-- `README.zh.md`
-- `.codex-plugin/plugin.json`
-- `.claude-plugin/plugin.json`
-- `.claude-plugin/marketplace.json`
-
----
-
-## 计划中的 Skills
-
-可按业务优先级逐步补齐：
-
-- 商品卖点提炼
-- 货架标题与搜索词优化
-- 直播带货脚本
-- 达人种草 brief
-- 大促活动策略
-- 店铺或活动复盘
-
----
-
-## GitHub 仓库
-
-- HTTPS：[https://github.com/saibodafu/e-commerce-skills](https://github.com/saibodafu/e-commerce-skills)
-- SSH：`git@github.com:saibodafu/e-commerce-skills.git`
-
----
+- 先生成可见的详情页效果，再逐步精修
+- 少信息也能生成初稿
+- 信息不足时做轻量假设，并明确标注
+- 不编造平台规则、销量、转化率、认证、竞品数据或客户案例
+- 输出可以交给运营、内容、设计或商品团队继续执行
 
 ## 项目结构
 
 ```text
 .
-├── .claude-plugin/
-│   ├── marketplace.json
-│   └── plugin.json
-├── .codex-plugin/
-│   └── plugin.json
+├── AGENTS.md
 ├── commands/
 │   └── ecommerce.md
-└── skills/
-    └── ecommerce-content-wireframe/
-        └── SKILL.md
+├── skills/
+│   └── ecommerce-content-wireframe/
+│       └── SKILL.md
+├── .claude-plugin/
+└── .codex-plugin/
 ```
-
----
-
-## 新增 Skill
-
-1. 创建 `skills/<skill-name>/SKILL.md`。
-2. 如果 workflow 需要复用脚本，把脚本放在 `skills/<skill-name>/scripts/`。
-3. 如果需要命令入口，在 `commands/` 下新增或更新 markdown 命令文件。
-4. 如果市场定位、关键词或产品描述变化，同步更新 `.claude-plugin/marketplace.json` 和 `.codex-plugin/plugin.json`。
-
-新增 skill 时，应先澄清场景、目标用户、输入、输出、边界、触发条件和质量标准；确认方向后再写入 skill 文件。
-
----
-
-## 说明
-
-- `.claude-plugin` 用于 Claude Code 插件和 marketplace 风格描述。
-- `.codex-plugin` 用于 Codex 插件清单兼容。
-- `commands/ecommerce.md` 提供 `/ecommerce` 命令入口。
-- `skills/` 是每个电商 workflow 的主说明。
-- 输出应能直接交给商品、运营、内容、直播、投放、设计、客服或销售团队使用，不编造平台规则、GMV、转化率、行业 benchmark 或未核验的竞品数据。
