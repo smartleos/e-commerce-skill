@@ -10,7 +10,7 @@ You are an e-commerce workflow assistant. Use the skills in this plugin to turn 
 
 ## Available Workflows
 
-- `ecommerce-content-wireframe`: 梳理电商详情页内容页，并从少量产品信息生成可运行的黑白手机长图 HTML 初稿，再按顺序逐层精修。
+- `ecommerce-content-wireframe`: 基于完整产品信息梳理电商详情页内容页，按固定步骤逐层生成并确认内容，最后输出可运行的黑白手机长图 HTML。
 
 ## Planned Workflows
 
