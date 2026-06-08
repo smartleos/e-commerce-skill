@@ -7,16 +7,16 @@
 /install-skill saibodafu/e-commerce-skill/ecommerce-detail-page-visual-design
 ```
 
-这是一个用于电商详情页策划、内容线框稿和逐屏视觉设计的 skill 包。
+这是一个用于沉淀电商实战工作流的 skill 包。当前已包含 2 个详情页相关 skill，后续可以继续按同样结构追加新的电商 skill。
 
 当前可用能力：
 
-- `ecommerce-content-wireframe`：从产品信息出发，梳理详情页内容结构、详情页文案，并生成可运行的手机长图 HTML 黑白线框稿。
-- `ecommerce-detail-page-visual-design`：在已有详情页文案、HTML 图、原型图、产品图或包装图的基础上，逐屏判断信息任务和视觉表达，推荐统一视觉风格，一屏一屏生成并确认，最后拼接成 750px 详情页长图。
+1. `ecommerce-content-wireframe`：从产品信息出发，梳理详情页内容结构、详情页文案，并生成可运行的手机长图 HTML 黑白线框稿。
+2. `ecommerce-detail-page-visual-design`：在已有详情页原型图、包装图及其他可选资料的基础上，逐屏判断信息任务和视觉表达，推荐统一视觉风格，一屏一屏生成并确认，最后拼接成 750px 详情页长图。
 
 ## 当前 Skill
 
-### ecommerce-content-wireframe
+### Skill 1：ecommerce-content-wireframe
 
 电商详情页内容黑白线框稿。
 
@@ -39,11 +39,13 @@
 
 最终会先整理成完整的详情页内容文档，再生成可直接运行的 HTML 黑白线框稿。
 
-### ecommerce-detail-page-visual-design
+### Skill 2：ecommerce-detail-page-visual-design
 
 电商详情页逐屏视觉设计与长图拼接。
 
-当你已经有详情页文案、HTML 图、原型图、产品图或品牌包装图，希望进入视觉设计阶段时使用。skill 会按固定顺序推进：
+当你已经有详情页原型图、包装图，并希望进入视觉设计阶段时使用。详情页文案、HTML 图、产品图、品牌规范、目标平台等资料不限，有则使用，没有则按现有信息推进并标注假设。
+
+skill 会按固定顺序推进：
 
 1. 逐屏分析每一屏的信息任务
 2. 判断适合的视觉表达类型
@@ -52,8 +54,6 @@
 5. 按顺序一屏一屏生成详情页设计
 6. 每一屏修改和确认后再进入下一屏
 7. 最后纵向拼接成 750px 长图，并检查漏屏、错序、重复、文字裁切和产品裁切
-
-这个 skill 会保留“假如你是一个电商详情页设计师……”这类可复制执行提示词，但不会把它作为 skill 的开始话术。
 
 ## 示例输入
 
@@ -67,7 +67,7 @@
 ```
 
 ```text
-使用 ecommerce-detail-page-visual-design，我已经有详情页文案、原型图和产品图，帮我逐屏分析视觉表达，再按顺序一屏一屏生成，最后拼接成 750px 长图。
+使用 ecommerce-detail-page-visual-design，我已经有详情页原型图和包装图，帮我逐屏分析视觉表达，再按顺序一屏一屏生成，最后拼接成 750px 长图。
 ```
 
 ## 也可以这样说
