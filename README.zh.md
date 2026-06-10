@@ -11,12 +11,20 @@
 
 電商詳情頁內容黑白線框稿。
 
-### 安裝
+### 安裝（codex CLI）
 
-在 Claude Code、Codex、WorkBuddy 等支援 skills 的工具中執行：
+從本 repo 取得繁體版，把 skill 複製到 codex 的 skills 目錄：
+
+```bash
+git clone https://github.com/smartleos/e-commerce-skill.git
+mkdir -p ~/.agents/skills   # 舊版 codex 路徑為 ~/.codex/skills
+cp -r e-commerce-skill/skills/ecommerce-content-wireframe ~/.agents/skills/
+```
+
+重啟 codex 後輸入 `/skills` 確認，或在 codex 對話中用內建的 `$skill-installer` 從 GitHub 目錄網址安裝：
 
 ```text
-/install-skill saibodafu/e-commerce-skill/ecommerce-content-wireframe
+$skill-installer https://github.com/smartleos/e-commerce-skill/tree/main/skills/ecommerce-content-wireframe
 ```
 
 ### 使用場景
@@ -79,12 +87,20 @@
 
 電商詳情頁逐屏視覺設計與長圖拼接。
 
-### 安裝
+### 安裝（codex CLI）
 
-在 Claude Code、Codex、WorkBuddy 等支援 skills 的工具中執行：
+從本 repo 取得繁體版，把 skill 複製到 codex 的 skills 目錄：
+
+```bash
+git clone https://github.com/smartleos/e-commerce-skill.git
+mkdir -p ~/.agents/skills   # 舊版 codex 路徑為 ~/.codex/skills
+cp -r e-commerce-skill/skills/ecommerce-detail-page-visual-design ~/.agents/skills/
+```
+
+重啟 codex 後輸入 `/skills` 確認，或在 codex 對話中用內建的 `$skill-installer` 從 GitHub 目錄網址安裝：
 
 ```text
-/install-skill saibodafu/e-commerce-skill/ecommerce-detail-page-visual-design
+$skill-installer https://github.com/smartleos/e-commerce-skill/tree/main/skills/ecommerce-detail-page-visual-design
 ```
 
 推薦在 Codex 下使用，並配合 ChatGPT Image 2 模型執行；這個組合對電商詳情頁視覺生成和中文文字呈現效果最好，更適合需要完整中文標題、賣點和長圖文案的場景。
