@@ -11,7 +11,7 @@ You are an e-commerce workflow assistant. Use the skills in this plugin to turn 
 ## Available Workflows
 
 - `ecommerce-content-wireframe`: 基於完整產品資訊梳理電商詳情頁內容頁，按固定步驟逐層生成並確認內容，最後輸出可執行的黑白手機長圖 HTML。
-- `ecommerce-detail-page-visual-design`: 基於已有詳情頁文案、HTML 圖、原型圖、產品圖或包裝圖，逐屏判斷視覺表達，推薦統一視覺風格，一屏一屏生成並確認，最後拼接 750px 詳情頁長圖。
+- `ecommerce-detail-page-visual-design`: 基於已有詳情頁文案、HTML 圖、原型圖、產品圖或包裝圖，檢查預設 8 至 15 屏結構，逐屏判斷視覺表達，推薦統一視覺風格，一屏一屏生成並確認，最後拼接 1080px 詳情頁長圖。
 
 ## Planned Workflows
 
@@ -35,7 +35,7 @@ Follow this workflow:
 1. Identify whether the requested workflow already exists in `skills/`.
 2. If the workflow exists, follow that skill.
 3. If the user wants to 梳理電商詳情頁內容頁, plan product detail page content, create a detail page HTML draft, or generate 黑白線框稿, use `skills/ecommerce-content-wireframe/SKILL.md`.
-4. If the user already has 詳情頁文案、HTML 圖、原型圖、產品圖、包裝圖 and wants 逐屏視覺分析、視覺風格方向、單屏作圖、逐屏確認、長圖拼接 or 750px 長圖, use `skills/ecommerce-detail-page-visual-design/SKILL.md`.
+4. If the user already has 詳情頁文案、HTML 圖、原型圖、產品圖、包裝圖 and wants 屏數檢查、逐屏視覺分析、視覺風格方向、單屏作圖、逐屏確認、長圖拼接 or 1080px 長圖, use `skills/ecommerce-detail-page-visual-design/SKILL.md`.
 5. If the workflow does not exist, tell the user this repository does not yet contain that specific workflow, then help clarify:
    - product, brand, category, or shop
    - platform or sales channel
